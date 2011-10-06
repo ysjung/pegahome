@@ -1,4 +1,27 @@
 Pegahome::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/pega"
+
+  get "pages/notice"
+
+  get "pages/text_board"
+
+  get "pages/picture_board"
+
+  get "pages/guest_board"
+
+  get "pages/data_board"
+  
+  root :to => 'pages#home'
+  match '/pega',           :to => 'pages#pega'
+  match '/notice',         :to => 'pages#notice'
+  match '/text_board',     :to => 'pages#text_board'
+  match '/picture_board',  :to => 'pages#picture_board'
+  match '/guest_board',    :to => 'pages#guest_board'
+  match '/data_board',     :to => 'pages#data_board'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
